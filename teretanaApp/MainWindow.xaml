@@ -1,0 +1,51 @@
+﻿<Window x:Class="teretanaApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:teretanaApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FF333030">
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="FontFamily" Value="Arial"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Height" Value="23"/>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="FontFamily" Value="Arial"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Height" Value="25"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Foreground" Value="White"/>
+                <Setter Property="Background" Value="#FF27B522"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="Height" Value="29"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <Image Source="C:\Users\Predrag\Desktop\teretanaApp\gym.jpg" Height="437" Stretch="UniformToFill"></Image>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Margin="50" Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock Text="Dobrodosli u DUNPGym" Foreground="White" Height="68" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Width="274"></TextBlock>
+            <TextBlock Text="Unesite svoju e-adresu:"></TextBlock>
+            <TextBox x:Name="txtEmail"></TextBox>
+            <TextBlock Text="Unesite lozinku:" Margin="0, 20, 0, 0"></TextBlock>
+            <TextBox x:Name="txtPassword"></TextBox>
+            <Button Content="Prijavi se" Margin="0, 20, 0, 0" Click="Button_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

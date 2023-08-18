@@ -1,0 +1,32 @@
+﻿<Window x:Class="teretanaApp.AWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:teretanaApp"
+        mc:Ignorable="d"
+        Title="AWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FF333030">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Button x:Name="createUser" Content="Kreiraj nalog za korisnika" Click="createUser_Click" Width="155" Background="White"/>
+            <Button x:Name="createSchedule" Content="Kreiraj raspored" Click="createSchedule_Click" Width="110" Background="White"/>
+            <Button x:Name="manageAcc" Content="Upravljaj nalozima" Width="114" Click="manageAcc_Click" Background="White"/>
+            <Button x:Name="finance" Content="Finansijski izvestaji" Width="120" Click="finance_Click" Background="White"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1" Width="100">
+            <Button Content="Odjavite se" Width="100" Click="LogoutButton_Click" Background="#FFF19A9A"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Background="#FF333030"  Grid.ColumnSpan="2" >
+            <Frame x:Name="panel" NavigationUIVisibility="Hidden"/>
+        </StackPanel>
+    </Grid>
+</Window>
